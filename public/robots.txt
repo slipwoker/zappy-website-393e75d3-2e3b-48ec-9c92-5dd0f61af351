@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://-393e75d3.zappy5.app/sitemap.xml
+Sitemap: https://ben-tzvi-law-office.zappy5.app/sitemap.xml
