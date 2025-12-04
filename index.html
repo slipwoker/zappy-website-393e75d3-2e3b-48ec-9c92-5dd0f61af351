@@ -7,13 +7,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <style>
 /* Zappy Attribution Header Styles */
 .zappy-header {
@@ -60,7 +60,66 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+<style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -262,7 +321,66 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="styles.css">
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -274,27 +392,27 @@
 <div class="container nav-container">
 <div class="nav-brand">
 <a href="/" class="logo-link">
-<img src="assets/logo.webp" alt="בן צבי ושות' משרד עורכי דין" class="logo">
+<img src="/assets/logo.webp" alt="בן צבי ושות' משרד עורכי דין" class="logo">
 </a>
 </div>
 <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 </button>
 <button class="phone-header-btn" aria-label="התקשרו אלינו">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
 </svg>
 </button>
 <ul class="nav-menu" id="navMenu">
 <li><a href="/services">שירותים</a></li>
 <li><a href="/about">אודות</a></li>
 
-        <li><a href="/legal-team">הצוות המשפטי</a></li></ul>
+        <li><a href="/legal-team">הצוות המשפטי</a></li><li><a href="/team" class="nav-link">הצוות שלנו</a><ul class="sub-menu"><li><a href="/team/ron-ben-zvi" class="nav-link">עו״ד רון בן צבי</a></li><li><a href="/team/michal-cohen" class="nav-link">עו״ד מיכל כהן</a></li><li><a href="/team/david-levi" class="nav-link">עו״ד דוד לוי</a></li></ul></li></ul>
 <div class="nav-cta-container">
 <li class="nav-cta-item">
 <a href="/contact" class="nav-cta-btn">צור קשר</a>
@@ -304,7 +422,7 @@
 </nav>
 <section class="hero">
 <div class="hero-overlay"></div>
-<img data-placeholder="hero-1" data-context="Modern law office interior with professional attorneys consulting property owners about urban renewal projects, showing architectural plans and legal documents on a sleek conference table" src="assets/hero-hero-1.webp?v=1763458982704" alt="בן צבי ושות' משרד עורכי דין מקצועי המתמחה בהתחדשות עירונית" class="hero-img">
+<img data-placeholder="hero-1" data-context="Modern law office interior with professional attorneys consulting property owners about urban renewal projects, showing architectural plans and legal documents on a sleek conference table" src="/assets/hero-hero-1.webp?v=1763458982704" alt="בן צבי ושות' משרד עורכי דין מקצועי המתמחה בהתחדשות עירונית" class="hero-img">
 <div class="container hero-content">
 <h1>הייעוץ המשפטי המקצועי שבעלי הנכסים שלכם זקוקים לו</h1>
 <h3>בן צבי ושות' משרד עורכי דין מוביל בהתחדשות עירונית, תמ״א 38 ודיני נדל״ן. ניסיון רב שנים בייצוג בעלי נכסים בפרויקטים מורכבים</h3>
@@ -338,35 +456,35 @@
 <h2>שירותי בן צבי ושות' משרד עורכי דין המקצועיים שלנו</h2>
 <div class="services-grid">
 <div class="service-card">
-<img data-placeholder="service-1" data-context="Professional legal consultation session between attorney and property owner reviewing urban renewal project documents and architectural plans" src="assets/service-service-1.webp?v=1763544362466" alt="ייעוץ משפטי מקצועי בהתחדשות עירונית">
+<img data-placeholder="service-1" data-context="Professional legal consultation session between attorney and property owner reviewing urban renewal project documents and architectural plans" src="/assets/service-service-1.webp?v=1763544362466" alt="ייעוץ משפטי מקצועי בהתחדשות עירונית">
 <div class="service-content">
 <h3>ייעוץ משפטי בהתחדשות עירונית</h3>
 <p>ייעוץ מקצועי ומעמיק לבעלי נכסים המעוניינים להצטרף לפרויקטי התחדשות עירונית. בדיקת כדאיות, הערכת סיכונים והמלצות אסטרטגיות להגנה על האינטרסים שלכם.</p>
 </div>
 </div>
 <div class="service-card">
-<img data-placeholder="service-2" data-context="Attorney representing property owners in legal proceedings, presenting case in modern courtroom with judge and opposing counsel" src="assets/service-service-2.webp?v=1763538457806" alt="ייצוג משפטי בפרויקטי תמ״א 38">
+<img data-placeholder="service-2" data-context="Attorney representing property owners in legal proceedings, presenting case in modern courtroom with judge and opposing counsel" src="/assets/service-service-2.webp?v=1763538457806" alt="ייצוג משפטי בפרויקטי תמ״א 38">
 <div class="service-content">
 <h3>ייצוג משפטי בתמ״א 38</h3>
 <p>ייצוג מלא של בעלי דירות בכל שלבי פרויקט תמ״א 38 - מהחתימה על הסכם השיתוף ועד לקבלת הדירה החדשה. אנו דואגים שהזכויות שלכם יישמרו מול היזם והקבלן.</p>
 </div>
 </div>
 <div class="service-card">
-<img data-placeholder="service-3" data-context="Business attorneys reviewing commercial contracts and corporate documents in modern office setting with city skyline view" src="assets/service-service-3.webp?v=1763538629587" alt="דיני מסחר וחברות לבן צבי ושות' משרד עורכי דין">
+<img data-placeholder="service-3" data-context="Business attorneys reviewing commercial contracts and corporate documents in modern office setting with city skyline view" src="/assets/service-service-3.webp?v=1763538629587" alt="דיני מסחר וחברות לבן צבי ושות' משרד עורכי דין">
 <div class="service-content">
 <h3>דיני מסחר וחברות</h3>
 <p>ייעוץ משפטי מקיף בדיני מסחר וחברות. ניסוח והתאמת חוזים עסקיים, ליווי עסקאות, הקמת חברות וייעוץ בנושאי ממשל תאגידי.</p>
 </div>
 </div>
 <div class="service-card">
-<img data-placeholder="service-4" data-context="Real estate attorney examining property ownership documents and land registry records with clients in professional office" src="assets/service-service-4.webp" alt="עורך דין נדל״ן והתחדשות עירונית">
+<img data-placeholder="service-4" data-context="Real estate attorney examining property ownership documents and land registry records with clients in professional office" src="/assets/service-service-4.webp" alt="עורך דין נדל״ן והתחדשות עירונית">
 <div class="service-content">
 <h3>דיני נדל״ן ומקרקעין</h3>
 <p>ייצוג בעסקאות נדל״ן מורכבות, בדיקת זכויות במקרקעין, ליווי רכישה ומכירה של נכסים, וטיפול בסכסוכי שכנים ובעיות תכנון ובנייה.</p>
 </div>
 </div>
 <div class="service-card">
-<img data-placeholder="service-5" data-context="Legal team reviewing complex real estate transaction documents and contracts for property owners in urban renewal projects" src="assets/service-service-5.webp?v=1763538800767" alt="ייעוץ משפטי תמ״א 38 לבעלי דירות">
+<img data-placeholder="service-5" data-context="Legal team reviewing complex real estate transaction documents and contracts for property owners in urban renewal projects" src="/assets/service-service-5.webp?v=1763538800767" alt="ייעוץ משפטי תמ״א 38 לבעלי דירות">
 <div class="service-content">
 <h3>בדיקת הסכמי התחדשות</h3>
 <p>בדיקה משפטית מדוקדקת של הסכמי שיתוף, הסכמי פינוי-בינוי והסכמים נלווים. אנו מוודאים שההסכם מגן על זכויותיכם ומזהים סעיפים בעייתיים טרם החתימה.</p>
@@ -394,7 +512,7 @@
 <a href="/about" class="btn-primary">קראו עוד עלינו</a>
 </div>
 <div class="why-us-image">
-<img data-placeholder="service-6" data-context="Professional law firm team of attorneys specializing in urban renewal and real estate law, standing confidently in modern office" src="assets/service-service-6.webp?v=1763455428729" alt="צוות בן צבי ושות' משרד עורכי דין מומחה בהתחדשות עירונית">
+<img data-placeholder="service-6" data-context="Professional law firm team of attorneys specializing in urban renewal and real estate law, standing confidently in modern office" src="/assets/service-service-6.webp?v=1763455428729" alt="צוות בן צבי ושות' משרד עורכי דין מומחה בהתחדשות עירונית">
 </div>
 </div>
 </div>
@@ -435,7 +553,7 @@
 </div>
 </div>
 </section>
-<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;" style="display:none;">
+<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -446,9 +564,9 @@
           <div class="all-rights-reserved">
             <p>© 2025 בן צבי ושות' משרד עורכי דין. כל הזכויות שמורות.</p>
           </div>
-          <div class="footer-social"><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:none;" style="display:none;"><i class="fab fa-facebook"></i></a>
-<a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:none;" style="display:none;"><i class="fab fa-instagram"></i></a>
-<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-social"><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="display:none;"><i class="fab fa-facebook"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:none;"><i class="fab fa-instagram"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
           <div class="footer-legal">
             <a href="privacy.html" aria-label="מדיניות פרטיות">
               מדיניות פרטיות
@@ -502,5 +620,40 @@
 })();
 </script>
     <div data-integration="accessibility:toolbar"></div>
-    <script src="script.js"></script>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
 </body></html>

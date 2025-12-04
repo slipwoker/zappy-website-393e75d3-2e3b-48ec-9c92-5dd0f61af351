@@ -7,13 +7,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <style>
 /* Zappy Attribution Header Styles */
 .zappy-header {
@@ -60,7 +60,66 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+<style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -262,7 +321,66 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="styles.css">
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body><div id="zappy-attribution-header" class="zappy-header" style="display: none;">
   <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
@@ -272,20 +390,20 @@
   <div class="container nav-container">
     <div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="assets/logo.webp" alt="בן צבי ושות' משרד עורכי דין" class="logo">
+        <img src="/assets/logo.webp" alt="בן צבי ושות' משרד עורכי דין" class="logo">
       </a>
     </div>
     <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
       <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
       <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </button>
     <button class="phone-header-btn" aria-label="התקשר אלינו">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span>התקשר</span>
     </button>
@@ -296,7 +414,7 @@
       <li><a href="/legal-team" class="nav-link active">הצוות המשפטי</a></li>
       <li><a href="#contact" class="nav-link">צור קשר</a></li>
     
-        <li><a href="/legal-team">הצוות המשפטי</a></li></ul>
+        <li><a href="/legal-team">הצוות המשפטי</a></li><li><a href="/team" class="nav-link">הצוות שלנו</a><ul class="sub-menu"><li><a href="/team/ron-ben-zvi" class="nav-link">עו״ד רון בן צבי</a></li><li><a href="/team/michal-cohen" class="nav-link">עו״ד מיכל כהן</a></li><li><a href="/team/david-levi" class="nav-link">עו״ד דוד לוי</a></li></ul></li></ul>
   </div>
 </nav>
 
@@ -335,7 +453,7 @@
       <div class="team-grid" data-component-id="component-1000-0"><div class="team-member-card zappy-item-element" data-item-index="0">
           <div class="member-image-placeholder">
             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" class="zappy-editable-icon" data-icon-type="svg">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="member-info">
@@ -353,7 +471,7 @@
         </div><div class="team-member-card zappy-item-element" data-item-index="1">
           <div class="member-image-placeholder">
             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" class="zappy-editable-icon" data-icon-type="svg">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="member-info">
@@ -371,7 +489,7 @@
         </div><div class="team-member-card zappy-item-element" data-item-index="2">
           <div class="member-image-placeholder">
             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" class="zappy-editable-icon" data-icon-type="svg">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="member-info">
@@ -383,7 +501,7 @@
         </div><div class="team-member-card zappy-item-element" data-item-index="3">
           <div class="member-image-placeholder">
             <svg width="80" height="80" viewBox="0 0 24 24" fill="none" class="zappy-editable-icon" data-icon-type="svg">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <div class="member-info">
@@ -410,7 +528,7 @@
         <div class="value-card">
           <div class="value-icon">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <h3 class="value-title">מקצועיות ומומחיות</h3>
@@ -422,6 +540,41 @@
         <div class="value-card">
           <div class="value-icon">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg></div></div></div></div></section></main>    <script src="script.js"></script>
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></div></div></div></div></section></main>
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
 </body></html>
