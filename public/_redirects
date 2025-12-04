@@ -3,7 +3,10 @@
 
 /services  /services.html  200
 /about  /about.html  200
-/contact  /contact.html  200
+/team  /team.html  200
+/team/ron-ben-zvi  /team/ron-ben-zvi.html  200
+/team/michal-cohen  /team/michal-cohen.html  200
+/team/david-levi  /team/david-levi.html  200
 /  /index.html  200
 
 # 404 fallback
