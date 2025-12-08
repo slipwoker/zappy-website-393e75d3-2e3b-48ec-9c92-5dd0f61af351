@@ -2,12 +2,22 @@
 # These rewrite rules show clean URLs to users while serving .html files
 
 /services  /services.html  200
-/about  /about.html  200
 /team  /team.html  200
-/team/ron-ben-zvi  /team/ron-ben-zvi.html  200
-/team/michal-cohen  /team/michal-cohen.html  200
-/team/david-levi  /team/david-levi.html  200
+/team/ron-ben-zvi  /team-ron-ben-zvi.html  200
+/team/michal-cohen  /team-michal-cohen.html  200
+/team/david-levi  /team-david-levi.html  200
+/owners  /owners.html  200
 /about  /about.html  200
+/good-news  /good-news.html  200
+/good-news/tama38-success-story  /good-news-tama38-success-story.html  200
+/good-news/pinuy-binuy-law-update  /good-news-pinuy-binuy-law-update.html  200
+/good-news/choosing-lawyer-guide  /good-news-choosing-lawyer-guide.html  200
+
+# Legal pages - redirect old .html URLs to friendly URLs
+/privacy.html  /privacy  301
+/accessibility.html  /accessibility  301
+/terms.html  /terms  301
+
 /  /index.html  200
 
 # 404 fallback
