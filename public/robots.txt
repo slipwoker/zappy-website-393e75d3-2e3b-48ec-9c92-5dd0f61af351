@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zappy-site-393e75d3-2e3b-48ec-9c92.onrender.com/sitemap.xml
+Sitemap: https://nbz-law.co.il/sitemap.xml
