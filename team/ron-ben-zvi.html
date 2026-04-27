@@ -1,10 +1,229 @@
-<!DOCTYPE html><html lang="he" dir="rtl"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="פרופיל מקצועי של עו״ד רון בן צבי, שותף מייסד במשרד בן צבי ושות'. מומחה מוביל בתחום ההתחדשות העירונית, תמ״א 38 ופינוי בינוי עם מעל 20 שנות ניסיון.">
-<meta name="keywords" content="בן צבי ושות' משרד עורכי דין, עורך דין התחדשות עירונית, ייעוץ משפטי תמ״א 38 לבעלי דירות, עורך דין נדל״ן והתחדשות עירונית">
-<title>עו״ד רון בן צבי - שותף מייסד | מומחה להתחדשות עירונית</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>עו״ד רון בן צבי - שותף מייסד | מומחה להתחדשות עירונית</title>
+    <meta name="description" content="פרופיל מקצועי של עו״ד רון בן צבי, שותף מייסד במשרד בן צבי ושות'. מומחה מוביל בתחום ההתחדשות העירונית, תמ״א 38 ופינוי בינוי עם מעל 20 שנות ניסיון.">
+    <meta name="keywords" content="">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '393e75d3-2e3b-48ec-9c92-5dd0f61af351',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+    <meta property="og:title" content="עו״ד רון בן צבי - שותף מייסד | מומחה להתחדשות עירונית">
+    <meta property="og:description" content="פרופיל מקצועי של עו״ד רון בן צבי, שותף מייסד במשרד בן צבי ושות'. מומחה מוביל בתחום ההתחדשות העירונית, תמ״א 38 ופינוי בינוי עם מעל 20 שנות ניסיון.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="עו״ד רון בן צבי - שותף מייסד | מומחה להתחדשות עירונית">
+    <meta name="twitter:description" content="פרופיל מקצועי של עו״ד רון בן צבי, שותף מייסד במשרד בן צבי ושות'. מומחה מוביל בתחום ההתחדשות העירונית, תמ״א 38 ופינוי בינוי עם מעל 20 שנות ניסיון.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -593,211 +812,19 @@ img[data-no-hero-position] { position: static !important; }
               });
             })();
           </script>
-        <!-- Zappy Analytics -->
-<script>
-(function() {
-  'use strict';
-  
-  // Configuration
-  var config = {
-    websiteId: '393e75d3-2e3b-48ec-9c92-5dd0f61af351',
-    apiUrl: 'https://api.zappy5.com/api/analytics/track',
-    sessionDuration: 30 * 60 * 1000, // 30 minutes
-    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
-    trackPageViews: true,
-    trackClicks: true,
-    trackFormSubmissions: true
-  };
-  
-  // Generate or retrieve persistent visitor ID (30 days)
-  function getVisitorId() {
-    var visitorKey = 'zappy_visitor_' + config.websiteId;
-    var visitor = null;
-    
-    try {
-      visitor = localStorage.getItem(visitorKey);
-      if (visitor) {
-        var visitorData = JSON.parse(visitor);
-        var now = Date.now();
-        
-        // Check if visitor ID is still valid (30 days)
-        if (now - visitorData.created < config.visitorDuration) {
-          // Update last seen timestamp
-          visitorData.lastSeen = now;
-          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
-          return visitorData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: LocalStorage not available');
-    }
-    
-    // Generate new visitor ID
-    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      localStorage.setItem(visitorKey, JSON.stringify({
-        id: newVisitorId,
-        created: Date.now(),
-        lastSeen: Date.now()
-      }));
-    } catch (e) {
-      // Continue without local storage
-    }
-    
-    return newVisitorId;
-  }
-  
-  // Generate or retrieve session ID (30 minutes)
-  function getSessionId() {
-    var sessionKey = 'zappy_session_' + config.websiteId;
-    var session = null;
-    
-    try {
-      session = sessionStorage.getItem(sessionKey);
-      if (session) {
-        var sessionData = JSON.parse(session);
-        var now = Date.now();
-        
-        // Check if session is still valid
-        if (now - sessionData.timestamp < config.sessionDuration) {
-          // Update timestamp
-          sessionData.timestamp = now;
-          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
-          return sessionData.id;
-        }
-      }
-    } catch (e) {
-      console.warn('Zappy Analytics: SessionStorage not available');
-    }
-    
-    // Generate new session ID
-    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    
-    try {
-      sessionStorage.setItem(sessionKey, JSON.stringify({
-        id: newSessionId,
-        timestamp: Date.now()
-      }));
-    } catch (e) {
-      // Continue without session storage
-    }
-    
-    return newSessionId;
-  }
-  
-  var visitorId = getVisitorId();
-  var sessionId = getSessionId();
-  
-  // Track an event
-  function trackEvent(eventType, data) {
-    data = data || {};
-    
-    var eventData = {
-      website_id: config.websiteId,
-      event_type: eventType,
-      page_path: window.location.pathname,
-      referrer: document.referrer || 'direct',
-      visitor_id: visitorId,
-      session_id: sessionId,
-      metadata: data
-    };
-    
-    // Use sendBeacon if available (better for page unload events)
-    if (navigator.sendBeacon) {
-      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
-      navigator.sendBeacon(config.apiUrl, blob);
-    } else {
-      // Fallback to fetch
-      fetch(config.apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(eventData),
-        keepalive: true
-      }).catch(function(error) {
-        console.warn('Zappy Analytics: Failed to track event', error);
-      });
-    }
-  }
-  
-  // Track page view
-  if (config.trackPageViews) {
-    trackEvent('pageview', {
-      title: document.title,
-      url: window.location.href
-    });
-  }
-  
-  // Track clicks on important elements
-  if (config.trackClicks) {
-    document.addEventListener('click', function(e) {
-      var target = e.target;
-      
-      // Track button clicks (counted as actions)
-      if (target.tagName === 'BUTTON' || target.closest('button')) {
-        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
-          element: 'button',
-          text: button.textContent.trim().substring(0, 100),
-          id: button.id || null,
-          class: button.className || null
-        });
-      }
-      
-      // Track link clicks (navigation - not counted as actions)
-      else if (target.tagName === 'A' || target.closest('a')) {
-        var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
-          element: 'link',
-          text: link.textContent.trim().substring(0, 100),
-          href: link.href,
-          external: link.hostname !== window.location.hostname
-        });
-      }
-    }, true);
-  }
-  
-  // Track form submissions
-  if (config.trackFormSubmissions) {
-    document.addEventListener('submit', function(e) {
-      var form = e.target;
-      
-      trackEvent('form_submit', {
-        form_id: form.id || null,
-        form_name: form.name || null,
-        form_action: form.action || null,
-        form_method: form.method || 'GET'
-      });
-    }, true);
-  }
-  
-  // Track time on page (send on page unload)
-  var pageLoadTime = Date.now();
-  
-  window.addEventListener('beforeunload', function() {
-    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
-    
-    trackEvent('page_unload', {
-      time_on_page: timeOnPage,
-      page_path: window.location.pathname
-    });
-  });
-  
-  // Expose tracking function globally for custom events
-  window.zappyAnalytics = {
-    track: trackEvent,
-    getVisitorId: function() { return visitorId; },
-    getSessionId: function() { return sessionId; }
-  };
-  
-})();
-</script>
-<!-- End Zappy Analytics -->
     <link rel="stylesheet" href="/styles.css">
+
+    <style id="zappy-widget-visibility">
+      #mic-access-tool-general-button, .mic-access-tool-general-button,
+      #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+      ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+      #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+        display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+      }
+    </style>
 </head>
 <body>
+
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
@@ -807,23 +834,23 @@ img[data-no-hero-position] { position: static !important; }
 <div class="container nav-container">
 <div class="nav-brand">
 <a href="/" class="logo-link">
-<img src="/assets/logo.webp" alt="בן צבי ושות' משרד עורכי דין" class="logo">
+<img src="/assets/logo.webp?v=1765186968787-q5pmau" alt="בן צבי ושות' משרד עורכי דין" class="logo">
 </a>
 </div>
 <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 </button>
 <button class="phone-header-btn" aria-label="התקשרו אלינו">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
 </svg>
 </button>
-<ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/team" class="nav-link">הצוות שלנו</a><ul class="sub-menu"><li><a href="/team/ron-ben-zvi">עו״ד נועם בן צבי</a></li><li><a href="/team/michal-cohen">עו״ד אליענה אפריאט</a></li><li><a href="/team/david-levi">עו״ד יפית טואטי</a></li></ul></li><li><a href="/owners" class="nav-link">בעלים</a><ul class="sub-menu"></ul></li><li><a href="/about" class="nav-link">אודות</a></li><li><a href="/good-news" class="nav-link">חדשות טובות</a><ul class="sub-menu"><li><a href="/good-news/tama38-success-story" class="nav-link">סיפורי הצלחה</a></li><li><a href="/good-news/pinuy-binuy-law-update" class="nav-link">עדכוני חקיקה</a></li><li><a href="/good-news/choosing-lawyer-guide" class="nav-link">מדריך בחירה</a></li></ul></li></ul>
+<ul class="nav-menu" id="navMenu"><li><a href="/services">שירותים</a></li><li><a href="/team" class="nav-link">הצוות שלנו</a><ul class="sub-menu"><li><a href="/team/ron-ben-zvi">עו״ד נועם בן צבי</a></li><li><a href="/team/michal-cohen">עו״ד אליענה אפריאט</a></li><li><a href="/team/david-levi">עו״ד יפית טואטי</a></li></ul></li><li><a href="/owners" class="nav-link">בעלים</a></li><li><a href="/about" class="nav-link">אודות</a><ul class="sub-menu"></ul></li><li><a href="/good-news" class="nav-link">חדשות טובות</a></li></ul>
 <div class="nav-cta-container">
 <li class="nav-cta-item">
 <a href="/contact" class="nav-cta-btn">צור קשר</a>
@@ -833,9 +860,9 @@ img[data-no-hero-position] { position: static !important; }
 </nav><main class="page-main blog-page ai-generated-page">
   <section class="section profile-hero" id="ron-hero" style="background-color: #f8f9fa !important; padding: 60px 0;; position: relative; overflow: hidden;" data-zappy-section="true">
     <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-      <div class="grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
+      <div class="grid" style="--zappy-grid-cols: 1fr 2fr; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;" data-zappy-explicit-columns="true">
         <div style="position: relative;">
-          <img data-placeholder="ron-profile" data-context="Portrait of Ron Ben Zvi, senior lawyer, standing confidently in a modern law office" data-zappy-editable-image="true" src="/assets/page-ron-profile-1764838503827.webp" alt="עו״ד נועם בן צבי" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);" class="generated-image">
+          <div class="zappy-inserted-element" style="margin: 20px 0; text-align: center; display: flex; justify-content: center;"><img id="element-saved-1765187518393-h40tuhbvxug" src="/assets/business-general-service-upload-1765187517374.webp" alt="Image" style="width: 100%; height: auto; border-radius: 8px; max-width: 100%;" data-element-type="image"></div>
         </div>
         <div>
           <h1 style="color: #303030 !important; font-size: 2.5rem; margin-bottom: 0.5rem;">עו״ד נועם בן צבי</h1>
@@ -867,7 +894,7 @@ img[data-no-hero-position] { position: static !important; }
 
       <div style="background-color: #f8f9fa !important; padding: 25px; border-radius: 8px; margin-bottom: 2rem;">
         <h3 style="color: #2c3e50 !important; font-size: 1.3rem; margin-bottom: 1rem;">השכלה והסמכה</h3>
-        <ul style="list-style-type: none; padding: 0; color: #4a5568 !important;"><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-item-index="0">• בוגר תואר ראשון (LL.B) במשפטים, מכללת קרית אונו</li><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-item-index="1">• חבר לשכת עורכי הדין בישראל משנת ***</li></ul>
+        <ul style="list-style-type: none; padding: 0; color: #4a5568 !important;"><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-item-index="0">• בוגר תואר ראשון (LL.B) במשפטים, מכללת קרית אונו (2008)<button class="zappy-item-delete-btn" title="Delete item"><svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;"><circle cx="15" cy="15" r="15" fill="#FF0083"></circle><g transform="translate(7.5, 6.5)"><path d="M13.4583 2.83332H11.2625C10.9236 1.18545 9.47401 0.002125 7.79165 0H6.37497C4.6926 0.002125 3.24302 1.18545 2.90414 2.83332H0.708322C0.317123 2.83332 0 3.15045 0 3.54164C0 3.93284 0.317123 4.25 0.708322 4.25H1.41664V13.4583C1.419 15.4134 3.00329 16.9977 4.95832 17H9.20832C11.1634 16.9977 12.7476 15.4134 12.75 13.4583V4.25H13.4583C13.8495 4.25 14.1666 3.93288 14.1666 3.54168C14.1666 3.15048 13.8495 2.83332 13.4583 2.83332ZM6.375 12.0417C6.375 12.4329 6.05788 12.75 5.66668 12.75C5.27545 12.75 4.95832 12.4329 4.95832 12.0417V7.79168C4.95832 7.40048 5.27544 7.08336 5.66664 7.08336C6.05784 7.08336 6.37497 7.40048 6.37497 7.79168L6.375 12.0417ZM9.20832 12.0417C9.20832 12.4329 8.8912 12.75 8.5 12.75C8.1088 12.75 7.79168 12.4329 7.79168 12.0417V7.79168C7.79168 7.40048 8.1088 7.08336 8.5 7.08336C8.8912 7.08336 9.20832 7.40048 9.20832 7.79168V12.0417ZM4.37113 2.83332C4.67241 1.98495 5.47473 1.41774 6.375 1.41664H7.79168C8.69195 1.41774 9.49427 1.98495 9.79555 2.83332H4.37113Z" fill="white"></path></g></svg></button><div class="zappy-drag-handle" data-no-icon-edit="true" title="Drag to reorder" draggable="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" data-no-icon-edit="true" style="cursor: pointer;"><path d="M8.86753 5.93382C8.86753 6.7257 8.22558 7.36765 7.4337 7.36765C6.64182 7.36765 5.99988 6.7257 5.99988 5.93382C5.99988 5.14194 6.64182 4.5 7.4337 4.5C8.22558 4.5 8.86753 5.14194 8.86753 5.93382Z" fill="#FF0083"></path><path d="M8.86753 9.375C8.86753 10.1669 8.22558 10.8088 7.4337 10.8088C6.64182 10.8088 5.99988 10.1669 5.99988 9.375C5.99988 8.58312 6.64182 7.94118 7.4337 7.94118C8.22558 7.94118 8.86753 8.58312 8.86753 9.375Z" fill="#FF0083"></path><path d="M8.86753 12.8162C8.86753 13.6081 8.22558 14.25 7.4337 14.25C6.64182 14.25 5.99988 13.6081 5.99988 12.8162C5.99988 12.0243 6.64182 11.3824 7.4337 11.3824C8.22558 11.3824 8.86753 12.0243 8.86753 12.8162Z" fill="#FF0083"></path><path d="M12.3087 5.93382C12.3087 6.7257 11.6668 7.36765 10.8749 7.36765C10.083 7.36765 9.44105 6.7257 9.44105 5.93382C9.44105 5.14194 10.083 4.5 10.8749 4.5C11.6668 4.5 12.3087 5.14194 12.3087 5.93382Z" fill="#FF0083"></path><path d="M12.3087 9.375C12.3087 10.1669 11.6668 10.8088 10.8749 10.8088C10.083 10.8088 9.44105 10.1669 9.44105 9.375C9.44105 8.58312 10.083 7.94118 10.8749 7.94118C11.6668 7.94118 12.3087 8.58312 12.3087 9.375Z" fill="#FF0083"></path><path d="M12.3087 12.8162C12.3087 13.6081 11.6668 14.25 10.8749 14.25C10.083 14.25 9.44105 13.6081 9.44105 12.8162C9.44105 12.0243 10.083 11.3824 10.8749 11.3824C11.6668 11.3824 12.3087 12.0243 12.3087 12.8162Z" fill="#FF0083"></path></svg></li><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-item-index="1">• חבר לשכת עורכי הדין בישראל משנת ****<button class="zappy-item-delete-btn" title="Delete item"><svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="cursor: pointer;"><circle cx="15" cy="15" r="15" fill="#FF0083"></circle><g transform="translate(7.5, 6.5)"><path d="M13.4583 2.83332H11.2625C10.9236 1.18545 9.47401 0.002125 7.79165 0H6.37497C4.6926 0.002125 3.24302 1.18545 2.90414 2.83332H0.708322C0.317123 2.83332 0 3.15045 0 3.54164C0 3.93284 0.317123 4.25 0.708322 4.25H1.41664V13.4583C1.419 15.4134 3.00329 16.9977 4.95832 17H9.20832C11.1634 16.9977 12.7476 15.4134 12.75 13.4583V4.25H13.4583C13.8495 4.25 14.1666 3.93288 14.1666 3.54168C14.1666 3.15048 13.8495 2.83332 13.4583 2.83332ZM6.375 12.0417C6.375 12.4329 6.05788 12.75 5.66668 12.75C5.27545 12.75 4.95832 12.4329 4.95832 12.0417V7.79168C4.95832 7.40048 5.27544 7.08336 5.66664 7.08336C6.05784 7.08336 6.37497 7.40048 6.37497 7.79168L6.375 12.0417ZM9.20832 12.0417C9.20832 12.4329 8.8912 12.75 8.5 12.75C8.1088 12.75 7.79168 12.4329 7.79168 12.0417V7.79168C7.79168 7.40048 8.1088 7.08336 8.5 7.08336C8.8912 7.08336 9.20832 7.40048 9.20832 7.79168V12.0417ZM4.37113 2.83332C4.67241 1.98495 5.47473 1.41774 6.375 1.41664H7.79168C8.69195 1.41774 9.49427 1.98495 9.79555 2.83332H4.37113Z" fill="white"></path></g></svg></button><div class="zappy-drag-handle" data-no-icon-edit="true" title="Drag to reorder" draggable="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" data-no-icon-edit="true" style="cursor: pointer;"><path d="M8.86753 5.93382C8.86753 6.7257 8.22558 7.36765 7.4337 7.36765C6.64182 7.36765 5.99988 6.7257 5.99988 5.93382C5.99988 5.14194 6.64182 4.5 7.4337 4.5C8.22558 4.5 8.86753 5.14194 8.86753 5.93382Z" fill="#FF0083"></path><path d="M8.86753 9.375C8.86753 10.1669 8.22558 10.8088 7.4337 10.8088C6.64182 10.8088 5.99988 10.1669 5.99988 9.375C5.99988 8.58312 6.64182 7.94118 7.4337 7.94118C8.22558 7.94118 8.86753 8.58312 8.86753 9.375Z" fill="#FF0083"></path><path d="M8.86753 12.8162C8.86753 13.6081 8.22558 14.25 7.4337 14.25C6.64182 14.25 5.99988 13.6081 5.99988 12.8162C5.99988 12.0243 6.64182 11.3824 7.4337 11.3824C8.22558 11.3824 8.86753 12.0243 8.86753 12.8162Z" fill="#FF0083"></path><path d="M12.3087 5.93382C12.3087 6.7257 11.6668 7.36765 10.8749 7.36765C10.083 7.36765 9.44105 6.7257 9.44105 5.93382C9.44105 5.14194 10.083 4.5 10.8749 4.5C11.6668 4.5 12.3087 5.14194 12.3087 5.93382Z" fill="#FF0083"></path><path d="M12.3087 9.375C12.3087 10.1669 11.6668 10.8088 10.8749 10.8088C10.083 10.8088 9.44105 10.1669 9.44105 9.375C9.44105 8.58312 10.083 7.94118 10.8749 7.94118C11.6668 7.94118 12.3087 8.58312 12.3087 9.375Z" fill="#FF0083"></path><path d="M12.3087 12.8162C12.3087 13.6081 11.6668 14.25 10.8749 14.25C10.083 14.25 9.44105 13.6081 9.44105 12.8162C9.44105 12.0243 10.083 11.3824 10.8749 11.3824C11.6668 11.3824 12.3087 12.0243 12.3087 12.8162Z" fill="#FF0083"></path></svg></li></ul>
       </div>
 
       <h2 style="color: #303030 !important; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e0e0d0; padding-bottom: 10px;">אני מאמין</h2>
@@ -900,15 +927,15 @@ img[data-no-hero-position] { position: static !important; }
 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:none;"><i class="fab fa-instagram"></i></a>
 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
           <div class="footer-legal">
-            <a href="privacy.html" aria-label="מדיניות פרטיות">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
               מדיניות פרטיות
             </a>
             <span class="separator">|</span>
-            <a href="accessibility.html" aria-label="נגישות">
+            <a href="/accessibility" aria-label="נגישות">
               נגישות
             </a>
             <span class="separator">|</span>
-            <a href="terms.html" aria-label="תנאי שימוש">
+            <a href="/terms" aria-label="תנאי שימוש">
               תנאי שימוש
             </a>
           </div>
@@ -953,6 +980,8 @@ img[data-no-hero-position] { position: static !important; }
 </script>
     <div data-integration="accessibility:toolbar"></div>
 
+    <script src="/script.js"></script>
+
     <script id="zappy-mobile-submenu-script">
     (function() {
       function initMobileSubmenuToggles() {
@@ -985,7 +1014,23 @@ img[data-no-hero-position] { position: static !important; }
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
       else { initMobileSubmenuToggles(); }
       var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
-    <script src="/script.js"></script>
-</body></html>
+</body>
+</html>
