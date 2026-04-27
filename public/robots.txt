@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nbz-law.co.il/sitemap.xml
+Sitemap: https://ben-tzvi-and-co-law-office.zappy5.app/sitemap.xml
