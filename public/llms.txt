@@ -1,6 +1,4 @@
-# בן צבי ושות' משרד עורכי דין — Generative Engine Optimization Map
-
-> משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -71,22 +69,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About בן צבי ושות' משרד עורכי דין
-משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
-
-## Services/Products
-- ייעוץ משפטי
-- ייצוג משפטי
-- דיני מסחר
-- דיני חברות
-- דיני נדל"ן
-
-## Target Audience
-בעלי נכסים בעסקאות התחדשות עירונית
-
-## Industry
-שירותים משפטיים
-
+## About Business
 ---
 
 # Additional Resources
