@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>חדשות טובות - עדכונים משפטיים והצלחות | בן צבי ושות'</title>
-    <meta name="description" content="התעדכנו בחדשות הטובות מעולם ההתחדשות העירונית. סיפורי הצלחה, עדכוני חקיקה ומידע משפטי חיוני לבעלי דירות מאת משרד עורכי דין בן צבי ושות'.">
+    <title>אורי אבני</title>
+    <meta name="description" content="עו״ד אורי אבני, שותף ומנהל מחלקת התחדשות עירונית מטעם משרד עורכי דין בן צבי ושות'. עורך דין התחדשות עירונית המלווה בעלי דירות בעסקאות תמ״א 38 ופינוי בינוי.">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -218,11 +218,11 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="חדשות טובות - עדכונים משפטיים והצלחות | בן צבי ושות'">
-    <meta property="og:description" content="התעדכנו בחדשות הטובות מעולם ההתחדשות העירונית. סיפורי הצלחה, עדכוני חקיקה ומידע משפטי חיוני לבעלי דירות מאת משרד עורכי דין בן צבי ושות'.">
+    <meta property="og:title" content="אורי אבני">
+    <meta property="og:description" content="עו״ד אורי אבני, שותף ומנהל מחלקת התחדשות עירונית מטעם משרד עורכי דין בן צבי ושות'. עורך דין התחדשות עירונית המלווה בעלי דירות בעסקאות תמ״א 38 ופינוי בינוי.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="חדשות טובות - עדכונים משפטיים והצלחות | בן צבי ושות'">
-    <meta name="twitter:description" content="התעדכנו בחדשות הטובות מעולם ההתחדשות העירונית. סיפורי הצלחה, עדכוני חקיקה ומידע משפטי חיוני לבעלי דירות מאת משרד עורכי דין בן צבי ושות'.">
+    <meta name="twitter:title" content="אורי אבני">
+    <meta name="twitter:description" content="עו״ד אורי אבני, שותף ומנהל מחלקת התחדשות עירונית מטעם משרד עורכי דין בן צבי ושות'. עורך דין התחדשות עירונית המלווה בעלי דירות בעסקאות תמ״א 38 ופינוי בינוי.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
@@ -747,7 +747,24 @@
               });
             })();
           </script>
-        <style id="zappy-ai-page-styles">
+        
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:url" content="https://nbz-law.co.il/lawyer-uri-avni">
+    <meta property="og:type" content="article">
+    
+    
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="אורי אבני">
+    <meta property="og:locale" content="he_IL">
+    <!-- Twitter Card Meta Tags -->
+    
+    
+    
+    
+    <meta name="twitter:image:alt" content="אורי אבני"><style id="zappy-ai-page-styles">
 
 
 /* Zappy Base Styles for Edit Mode Compatibility */
@@ -755,18 +772,27 @@
 .section { padding: 4rem 0; position: relative; display: block !important; }
 /* Reset section grid - sections should contain grids, not BE grids */
 section[data-zappy-section] { display: block !important; grid-template-columns: unset !important; }
-/* Grid layouts - use !important to ensure they apply */
-.grid { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; }
+/* Grid layouts - consistent styling across all grid types */
+/* Services/Gallery/Portfolio grids - adaptive with lower min-width for more columns */
+/* Note: :not(.zappy-preserve-css-grid) excludes grids that have custom inline styles that should be preserved */
+.services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid), .testimonials-grid:not(.zappy-preserve-css-grid) {
+  display: grid !important;
+  gap: 2rem !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)) !important;
+}
+/* Generic grid - slightly larger min-width */
+.grid:not(.zappy-preserve-css-grid) { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)) !important; }
 .grid.grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
 .grid.grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
 .grid.grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
-.card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+/* Card styling */
+.card, .service-card, .blog-card, .testimonial-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover, .service-card:hover, .blog-card:hover, .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+.card img, .service-card img, .blog-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; cursor: pointer; border: none; }
 .btn-primary { background-color: #909080; color: white; }
 .btn-primary:hover { filter: brightness(1.1); }
-/* Pricing grid specific - use !important to override AI-generated CSS */
+/* Pricing grid specific */
 .pricing-grid { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; }
 .pricing-card { background: #fff !important; border-radius: 16px !important; padding: 2rem !important; box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
 .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important; }
@@ -788,15 +814,22 @@ section[data-zappy-section] { display: block !important; grid-template-columns: 
 @media (max-width: 768px) {
   .container { padding: 0 1rem; }
   .section { padding: 2.5rem 0; }
-  .grid { gap: 1.5rem; grid-template-columns: 1fr; }
-  .grid.grid-2, .grid.grid-3, .grid.grid-4 { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .grid:not(.zappy-preserve-css-grid), .services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid), .testimonials-grid:not(.zappy-preserve-css-grid) { 
+    gap: 1.5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important; 
+  }
+  .grid.grid-2:not(.zappy-preserve-css-grid), .grid.grid-3:not(.zappy-preserve-css-grid), .grid.grid-4:not(.zappy-preserve-css-grid) { grid-template-columns: 1fr; }
+  .pricing-grid:not(.zappy-preserve-css-grid) { grid-template-columns: 1fr; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .grid.grid-3, .grid.grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid.grid-3:not(.zappy-preserve-css-grid), .grid.grid-4:not(.zappy-preserve-css-grid) { grid-template-columns: repeat(2, 1fr); }
+  .services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid) { 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; 
+  }
 }
-/* Hero container fixes - contain absolute images */
-[class*="hero"], [id*="hero"] { position: relative !important; overflow: hidden !important; }
+/* Hero container fixes - contain absolute images and prevent viewport overflow */
+/* NOTE: Do NOT force overflow:hidden — sections with bottom SVG dividers need overflow:visible */
+[class*="hero"], [id*="hero"] { position: relative !important; max-width: 100% !important; box-sizing: border-box !important; }
 [class*="hero"] > .container, [id*="hero"] > .container { position: relative; z-index: 2; }
 .hero-image-wrapper, [class*="image-wrapper"] { position: relative !important; overflow: hidden !important; }
 /* Prevent hero positioning on non-hero page images */
@@ -858,82 +891,54 @@ img[data-no-hero-position] { position: static !important; }
 </li>
 </div>
 </div>
-</nav><main class="page-main blog-page ai-generated-page"><section class="section hero-section" id="news-hero" style="background-color: #f8f9fa !important; padding: 80px 0; border-bottom: 1px solid #e0e0d0;; position: relative; overflow: hidden;" data-zappy-section="true">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
-    <h1 style="color: #2c3e50 !important; font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700;">חדשות טובות: עדכונים מהשטח</h1>
-    <p style="color: #4a5568 !important; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem; line-height: 1.6;">בתוך המורכבות של עולם הנדל"ן והבירוקרטיה, אנחנו כאן כדי להאיר את ההצלחות. כמשרד עורכי דין מוביל, אנו גאים לשתף אתכם בניצחונות הקטנים והגדולים, בשינויי חקיקה חיוביים ובסיפורים מעוררי השראה מפרויקטים של התחדשות עירונית.</p>
-  </div>
-</section>
+</nav><main class="page-main blog-page ai-generated-page">
+  <section class="section profile-hero" id="profile-hero" style="background-color: #f8f9fa !important; padding: 60px 0; position: relative; overflow: hidden;" data-zappy-section="true">
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+      <div class="grid" style="--zappy-grid-cols: 1fr 2fr; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;" data-zappy-explicit-columns="true">
+        <div style="position: relative;">
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777446909058-gc5ymdrgg" data-element-type="image" data-zappy-zoom-wrapper-width="464px" data-zappy-zoom-wrapper-height="619px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 464px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 619px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="uri-avni-portrait" data-context="Professional studio portrait of male lawyer Uri Avni, wearing a modern suit, confident and friendly expression, light modern background" src="/assets/page-uri-avni-portrait-1777447073833-adze5z.webp?v=1777447075746" alt="עו״ד אורי אבני משרד עורכי דין" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px; object-position: 50% 50% !important; height: auto; max-width: 100%; display: block; margin: 0px !important" class="generated-image" data-element-type="image" data-element-id="img-1777446909058-gc5ymdrgg" data-zappy-object-position="50% 50%" data-zappy-zoom="1"></div>
+        </div>
+        <div>
+          <h1 style="color: #303030 !important; font-size: 2.5rem; margin-bottom: 0.5rem;">עו״ד אורי אבני</h1>
+          <p style="font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem; color: rgb(44, 62, 80) !important;">יועץ</p>
+          <div style="background-color: #ffffff !important; padding: 30px; border-radius: 8px; border-right: 4px solid #2c3e50; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: rgb(48, 48, 48) !important;">
 
-<section class="section intro-section" id="news-intro" style="background-color: #ffffff !important; padding: 60px 0;" data-zappy-section="true">
-  <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-    <div style="display: flex; flex-direction: column; gap: 30px;">
-      <h2 style="color: #303030 !important; font-size: 2rem; margin-bottom: 1rem; border-right: 4px solid #2c3e50; padding-right: 15px;">למה חשוב להישאר מעודכנים?</h2>
-      <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8;">
-        עסקאות התחדשות עירונית, בין אם מדובר בפרויקט תמ"א 38 או פינוי בינוי, הן עסקאות מורכבות וארוכות טווח. עבור בעלי נכסים רבים, מדובר בעסקה הכלכלית המשמעותית ביותר שיבצעו בחייהם. משרד עורכי דין בן צבי ושות' מאמין כי ידע הוא כוח. כאשר בעלי הדירות מבינים את התהליך, מכירים את זכויותיהם ומודעים למגמות החדשות בשוק, הם יכולים לקבל החלטות מושכלות יותר.
-      </p>
-      <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8;">
-        בעמוד זה, המוקדש ל"חדשות טובות", אנו בוחרים להתמקד בצד החיובי והבונה של התחום המשפטי. כאן תמצאו מידע על תקדימים משפטיים שמיטיבים עם הדיירים, סיפורים על בניינים ישנים שהפכו לפניני נדל"ן מודרניות, וטיפים כיצד עורך דין התחדשות עירונית מנוסה יכול להפוך את החלום למציאות בטוחה ורווחית. אנו מזמינים אתכם לקרוא, להחכים ולגלות כיצד הליווי המשפטי הנכון עושה את ההבדל.
-      </p>
+ליטיגציה מסחרית ותובענות ייצוגיות</h2>
+            <p style="line-height: 1.8; margin-bottom: 0px; color: rgb(74, 85, 104) !important;">לעו"ד אבני ניסיון עשיר בייצוג בהליכי התדיינות משפטית מורכבים, ובכלל זה: סכסוכים חוזיים, סכסוכים בין בעלי מניות ועוד. <br>לעו"ד אבני ניסיון רב בניהול תבענות ייצוגיות ונגזרות כשותף להובלת כמה מהתיקים הבולטים בישראל בתחום בשנים האחרונות.<br>בנוסף מטפל עו"ד אבני בעסקאות מסחריות שונות, ומעניק ליווי משפטי שוטף לגופים עסקיים גדולים בישראל ומתן חוות דעת שונות.<br>עו"ד אבני עבד בין השנים 2008-2016 במשרד פישר בכר חן וול אוריון ושות', כעו"ד בכיר.&nbsp;&nbsp;</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section articles-grid" id="news-grid" style="background-color: #e0e0d0 !important; padding: 80px 0;" data-zappy-section="true">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="color: #2c3e50 !important; font-size: 2.2rem; text-align: center; margin-bottom: 50px;">כתבות נבחרות ועדכונים אחרונים</h2>
-    
-    <div class="grid zappy-preserve-css-grid" style="--zappy-grid-cols: 365.325px 365.337px 365.325px; display: grid; grid-template-columns: 365.325px 365.337px 365.325px; gap: 2.5rem; align-items: stretch !important;" id="zappy-auto-grid-1777366050625-gk2zkt" data-zappy-auto-grid="true" data-original-item-width="365" data-original-gap="32px" data-zappy-explicit-columns="true">
-      
-      <!-- Article Card 1 -->
-      <article class="card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column;" data-grid-item-index="0">
-        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden;">
-          <img data-placeholder="tama-success" data-context="Modern renovated residential building in Israel sunny day" src="/assets/page-tama-success-1764855190496.webp" alt="בניין מגורים מחודש" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" data-no-hero-position="true" class="generated-image" data-element-type="image" data-element-id="img-1777366050604-50u6ady2o">
-        </div>
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
-          <h3 style="font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; color: rgb(44, 62, 80) !important;">כותרת בהקמה</h3>
-          <p style="margin-bottom: 20px; line-height: 1.6; flex-grow: 1; color: rgb(74, 85, 104) !important;">בהקמה</p>
-          <p><a href="/good-news/tama38-success-story" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: 600; text-align: center; transition: background-color 0.2s;">קראו את הסיפור המלא</a>
-        </p></div>
-      </article>
+  
 
-      <!-- Article Card 2 -->
-      <article class="card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column;" data-grid-item-index="1">
-        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden;">
-          <img data-placeholder="legal-document" data-context="Close up of legal documents and gavel on a wooden desk" src="/assets/page-legal-document-1764855190668.webp" alt="מסמכים משפטיים" style="width: 100%; height: 100%; object-fit: cover;" data-no-hero-position="true" class="generated-image" data-element-type="image" data-element-id="img-1777366050604-hr12m6pxp">
-        </div>
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
-          <h3 style="font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; color: rgb(44, 62, 80) !important;">כותרת בהקמה</h3>
-          <p style="margin-bottom: 20px; line-height: 1.6; flex-grow: 1; color: rgb(74, 85, 104) !important;">בהקמה</p>
-          <p><a href="/good-news/pinuy-binuy-law-update" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: 600; text-align: center; transition: background-color 0.2s;">למדריך המלא</a>
-        </p></div>
-      </article>
+  <section class="section profile-details" id="uri-details" style="background-color: #ffffff !important; padding: 60px 0;" data-zappy-section="true">
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+      <h2 style="color: #303030 !important; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e0e0d0; padding-bottom: 10px;">תחומי התמחות וניסיון</h2>
+      <ul style="line-height: 2; color: rgb(74, 85, 104); margin-bottom: 2rem;"><li>בהקמה</li></ul>
 
-      <!-- Article Card 3 -->
-      <article class="card" style="background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column;" data-grid-item-index="2">
-        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden;">
-          <img data-placeholder="handshake" data-context="Business handshake between lawyer and client in office" src="/assets/page-handshake-1764855189619.webp" alt="לחיצת יד עסקית" style="width: 100%; height: 100%; object-fit: cover;" data-no-hero-position="true" class="generated-image" data-element-type="image" data-element-id="img-1777366050604-ohed3mc7k">
-        </div>
-        <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column;">
-          <h3 style="font-size: 1.4rem; margin-bottom: 15px; font-weight: 700; color: rgb(44, 62, 80) !important;">כותרת בהקמה</h3>
-          <p style="margin-bottom: 20px; line-height: 1.6; flex-grow: 1; color: rgb(74, 85, 104) !important;">בהקמה</p>
-          <p><a href="/good-news/choosing-lawyer-guide" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: 600; text-align: center; transition: background-color 0.2s;">לטיפים החשובים</a>
-        </p></div>
-      </article>
+      <div style="background-color: #f8f9fa !important; padding: 25px; border-radius: 8px; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #2c3e50 !important;">השכלה והסמכה</h3>
+        <ul style="list-style-type: none; padding: 0px; color: rgb(74, 85, 104) !important;"><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-grid-item-index="0">• 
 
+עו"ד אבני מחזיק בתארים ראשונים במשפטים (L.L.B) ובמנהל עסקים בהצטיינות מאוניברסיטת תל-אביב וכן בתואר שני (MBA) מאוניברסיטת תל אביב.
+
+</li><li style="margin-bottom: 10px; padding-right: 20px; position: relative;" data-grid-item-index="1">• חבר לשכת עורכי הדין בישראל החל משנת 2008</li></ul>
+      </div>
+
+      <h2 style="color: #303030 !important; font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid #e0e0d0; padding-bottom: 10px;">אני מאמין</h2>
+      <blockquote style="font-size: 1.25rem; font-style: italic; color: #2c3e50 !important; border-right: 4px solid #2c3e50; padding-right: 20px; margin: 0 0 2rem 0;">
+        בהקמה
+      </blockquote>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="/contact" class="btn" style="display: inline-block; background-color: #2c3e50 !important; color: white; padding: 15px 35px; text-decoration: none; border-radius: 4px; font-weight: 700; transition: background-color 0.2s;" data-element-type="button" data-native-element="true">תיאום פגישה עם עו״ד אורי אבני</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="section cta-section" id="news-cta" style="background-color: #2c3e50 !important; padding: 80px 0; text-align: center;" data-zappy-section="true">
-  <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <h2 style="color: #ffffff !important; font-size: 2.5rem; margin-bottom: 1.5rem;">רוצים לשמוע עוד חדשות טובות?</h2>
-    <p style="color: #e0e0d0 !important; font-size: 1.25rem; margin-bottom: 2.5rem; line-height: 1.6;">
-      משרד עורכי דין בן צבי ושות' עומד לרשותכם בכל שאלה. אם אתם שוקלים להיכנס לפרויקט התחדשות עירונית, אל תעשו זאת לבד. בואו לפגישת ייעוץ ראשונית.
-    </p>
-    <a href="/contact" style="display: inline-block; background-color: #ffffff; color: #2c3e50 !important; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1rem; transition: transform 0.2s;">צור קשר לתיאום פגישה</a>
-  </div>
-</section></main>
+  </section>
+</main>
 
 
 
@@ -1005,6 +1010,9 @@ img[data-no-hero-position] { position: static !important; }
 })();
 </script>
     <div data-integration="accessibility:toolbar"></div>
+<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
+<i class="fab fa-whatsapp"></i>
+</a>
 
     <script src="/script.js"></script>
 
@@ -1056,6 +1064,148 @@ img[data-no-hero-position] { position: static !important; }
           observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
         });
       }, 500);
+    })();
+    </script>
+
+    <script>
+    (function(){
+      var _applied=false;
+      function _isHeroBg(w){var img=w.querySelector('img');if(img&&(img.getAttribute('data-hero-bg')==='true'||img.getAttribute('data-hero-background')==='true'))return true;var p=(w.style.position||'').replace(/\s*!important\s*/g,'').trim();var ww=(w.style.width||'').replace(/\s*!important\s*/g,'').trim();var hh=(w.style.height||'').replace(/\s*!important\s*/g,'').trim();return p==='absolute'&&ww==='100%'&&hh==='100%';}
+      function fixDesktopWrappers(){
+        // No-op: desktop wrapper restoration is handled by ZAPPY_PUBLISHED_ZOOM_WRAPPER_RUNTIME
+        // in script.js (restoreWrapperDimensions). The old inflation logic here was expanding
+        // small wrappers (e.g. 139px logo wrappers) to their parent width, conflicting with
+        // the correct stored dimensions.
+      }
+      function _parsePos(s){var x=50,y=50;try{var m=(s||'').match(/(-?d+(?:.d+)?)%s+(-?d+(?:.d+)?)%/);if(m){x=parseFloat(m[1]);y=parseFloat(m[2]);}}catch(e){}if(!isFinite(x))x=50;if(!isFinite(y))y=50;return{x:Math.max(0,Math.min(100,x)),y:Math.max(0,Math.min(100,y))};}
+      function _coverPct(iA,cA){if(!isFinite(iA)||iA<=0||!isFinite(cA)||cA<=0)return{w:100,h:100};if(iA>=cA)return{w:(iA/cA)*100,h:100};return{w:100,h:(cA/iA)*100};}
+      function applyMobile(){
+        if(_applied)return;_applied=true;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(_isHeroBg(w))return;
+          var cw=w.style.getPropertyValue('width');
+          var _sW=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-width'))||0;
+          var _sH=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-height'))||0;
+          if(!cw&&!(_sW>0&&_sH>0))return;
+          if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
+          var img=w.querySelector('img');
+          if(!img)return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileZoomStr=img.getAttribute('data-zappy-mobile-zoom');
+          var mobileZoom=parseFloat(mobileZoomStr);
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var parentOvf=w.parentElement?((w.parentElement.style.overflow||'')+(window.getComputedStyle(w.parentElement).overflow||'')).trim():'';
+          var inConstrainedParent=parentOvf.indexOf('hidden')!==-1||parentOvf.indexOf('clip')!==-1;
+          if(inConstrainedParent){
+            w.style.setProperty('max-width','100%','important');
+          }else{
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+          }
+          if(mobileSrc)img.src=mobileSrc;
+          function _applyZoomCrop(_img,_w,_ePos,_eZoom){
+            var rect=_w.getBoundingClientRect();
+            if(!rect||!rect.width||!rect.height)return;
+            var nW=_img.naturalWidth||0,nH=_img.naturalHeight||0;
+            if(!(nW>0&&nH>0))return;
+            var iA=nW/nH,cA=rect.width/rect.height;
+            var cv=_coverPct(iA,cA);
+            var wP=100,hP=100;
+            if(_eZoom>=1){wP=cv.w*_eZoom;hP=cv.h*_eZoom;}
+            else{var t2=(_eZoom-0.5)/0.5;if(!isFinite(t2))t2=0;t2=Math.max(0,Math.min(1,t2));wP=100+t2*(cv.w-100);hP=100+t2*(cv.h-100);}
+            var p2=_parsePos(_ePos);
+            var lP=(100-wP)*(p2.x/100);
+            var tP=(100-hP)*(p2.y/100);
+            _img.style.setProperty('position','absolute','important');
+            _img.style.setProperty('left',lP+'%','important');
+            _img.style.setProperty('top',tP+'%','important');
+            _img.style.setProperty('width',wP+'%','important');
+            _img.style.setProperty('height',hP+'%','important');
+            _img.style.setProperty('max-width','none','important');
+            _img.style.setProperty('max-height','none','important');
+            _img.style.setProperty('display','block','important');
+            _img.style.setProperty('object-fit',_eZoom<1?'fill':'cover','important');
+            _img.style.setProperty('transform','none','important');
+            _img.style.setProperty('margin','0','important');
+          }
+          if(_sW>0&&_sH>0){
+            var effZoom=(isFinite(mobileZoom)&&mobileZoom>0)?mobileZoom:(parseFloat(img.getAttribute('data-zappy-zoom'))||1);
+            var effPos=mobilePos||img.getAttribute('data-zappy-object-position')||img.style.objectPosition||'50% 50%';
+            w.style.setProperty('overflow','hidden','important');
+            w.style.setProperty('position','relative','important');
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+            if(_sW>0&&_sH>0){w.style.setProperty('padding-bottom','0','important');w.style.setProperty('aspect-ratio',_sW+'/'+_sH,'important');w.style.setProperty('height','auto','important');}
+            _applyZoomCrop(img,w,effPos,effZoom);
+            if(!(img.complete&&img.naturalWidth>0)){
+              (function(_i,_w2,_p,_z){_i.addEventListener('load',function _ol(){_i.removeEventListener('load',_ol);try{_applyZoomCrop(_i,_w2,_p,_z);}catch(e){}});
+              })(img,w,effPos,effZoom);
+            }
+          }else{
+            if(!inConstrainedParent)w.style.setProperty('height','auto','important');
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('max-width','100%','important');
+            img.style.setProperty('max-height',inConstrainedParent?'none':'400px','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+            img.style.setProperty('transform','none','important');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          if(mobileSrc)img.src=mobileSrc;
+          if(mobilePos)img.style.setProperty('object-position',mobilePos,'important');
+          if(mobileZoom>1){
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',mobilePos||'50% 50%','important');
+            var p=img.parentElement;
+            if(p)p.style.setProperty('overflow','hidden','important');
+          }
+        });
+      }
+      function revertDesktop(){
+        if(!_applied)return;_applied=false;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(w._zappyDesktop&&w._zappyDesktop.wStyle!=null){w.setAttribute('style',w._zappyDesktop.wStyle);}
+          var img=w.querySelector('img');
+          if(img&&img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        _fixHeroBgWrappers();
+        fixDesktopWrappers();
+      }
+      function _fixHeroBgWrappers(){var isMob=window.innerWidth<=768;document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){if(!_isHeroBg(w))return;w.style.setProperty('position','absolute','important');w.style.setProperty('top','0','important');w.style.setProperty('left','0','important');w.style.setProperty('width','100%','important');w.style.setProperty('height','100%','important');w.style.setProperty('max-width','none','important');w.style.setProperty('overflow','hidden','important');w.setAttribute('data-zappy-zoom-wrapper-width-mode','full');var img=w.querySelector('img');if(img){img.style.setProperty('width','100%','important');img.style.setProperty('height','100%','important');img.style.setProperty('object-fit','cover','important');img.style.setProperty('position','relative','important');img.style.setProperty('top','0','important');img.style.setProperty('left','0','important');img.style.setProperty('max-width','none','important');img.style.setProperty('max-height','none','important');img.style.setProperty('display','block','important');if(isMob){var mSrc=img.getAttribute('data-zappy-mobile-src');var mPos=img.getAttribute('data-zappy-mobile-object-position');var mZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));if(mSrc){if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};img.src=mSrc;}if(mPos)img.style.setProperty('object-position',mPos,'important');if(mZoom>1){img.style.setProperty('transform','scale('+mZoom+')','important');img.style.setProperty('transform-origin',mPos||'50% 50%','important');}}}});}
+      function init(){
+        _fixHeroBgWrappers();
+        var mq=window.matchMedia('(max-width:768px)');
+        function onChange(e){if(e.matches)applyMobile();else revertDesktop();}
+        if(mq.matches)applyMobile();
+        else fixDesktopWrappers();
+        try{mq.addEventListener('change',onChange);}catch(e){mq.addListener(onChange);}
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+      else setTimeout(init,50);
     })();
     </script>
 </body>
