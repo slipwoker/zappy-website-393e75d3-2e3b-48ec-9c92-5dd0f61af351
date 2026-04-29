@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>סיפור הצלחה: קיצור הדרך להיתר בנייה בתמ״א 38 | בן צבי ושות'</title>
-    <meta name="description" content="קראו כיצד משרד בן צבי ושות' סייע לדיירים ברמת גן לקבל היתר בנייה לפרויקט תמ״א 38 בזמן שיא, תוך התגברות על חסמים בירוקרטיים.">
+    <title>מחלקות המשרד</title>
+    <meta name="description" content="הכירו את מחלקות משרד עורכי דין בן צבי ושות'. חלוקת עבודה מקצועית הכוללת עורך דין התחדשות עירונית, מחלקת נדל״ן, ליטיגציה וצוות אדמיניסטרטיבי.">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -218,11 +218,11 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="סיפור הצלחה: קיצור הדרך להיתר בנייה בתמ״א 38 | בן צבי ושות'">
-    <meta property="og:description" content="קראו כיצד משרד בן צבי ושות' סייע לדיירים ברמת גן לקבל היתר בנייה לפרויקט תמ״א 38 בזמן שיא, תוך התגברות על חסמים בירוקרטיים.">
+    <meta property="og:title" content="מחלקות המשרד">
+    <meta property="og:description" content="הכירו את מחלקות משרד עורכי דין בן צבי ושות'. חלוקת עבודה מקצועית הכוללת עורך דין התחדשות עירונית, מחלקת נדל״ן, ליטיגציה וצוות אדמיניסטרטיבי.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="סיפור הצלחה: קיצור הדרך להיתר בנייה בתמ״א 38 | בן צבי ושות'">
-    <meta name="twitter:description" content="קראו כיצד משרד בן צבי ושות' סייע לדיירים ברמת גן לקבל היתר בנייה לפרויקט תמ״א 38 בזמן שיא, תוך התגברות על חסמים בירוקרטיים.">
+    <meta name="twitter:title" content="מחלקות המשרד">
+    <meta name="twitter:description" content="הכירו את מחלקות משרד עורכי דין בן צבי ושות'. חלוקת עבודה מקצועית הכוללת עורך דין התחדשות עירונית, מחלקת נדל״ן, ליטיגציה וצוות אדמיניסטרטיבי.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
@@ -747,7 +747,24 @@
               });
             })();
           </script>
-        <style id="zappy-ai-page-styles">
+        
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:url" content="https://nbz-law.co.il/team/departments">
+    <meta property="og:type" content="article">
+    
+    
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="מחלקות המשרד">
+    <meta property="og:locale" content="he_IL">
+    <!-- Twitter Card Meta Tags -->
+    
+    
+    
+    
+    <meta name="twitter:image:alt" content="מחלקות המשרד"><style id="zappy-ai-page-styles">
 
 
 /* Zappy Base Styles for Edit Mode Compatibility */
@@ -755,18 +772,27 @@
 .section { padding: 4rem 0; position: relative; display: block !important; }
 /* Reset section grid - sections should contain grids, not BE grids */
 section[data-zappy-section] { display: block !important; grid-template-columns: unset !important; }
-/* Grid layouts - use !important to ensure they apply */
-.grid { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; }
+/* Grid layouts - consistent styling across all grid types */
+/* Services/Gallery/Portfolio grids - adaptive with lower min-width for more columns */
+/* Note: :not(.zappy-preserve-css-grid) excludes grids that have custom inline styles that should be preserved */
+.services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid), .testimonials-grid:not(.zappy-preserve-css-grid) {
+  display: grid !important;
+  gap: 2rem !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)) !important;
+}
+/* Generic grid - slightly larger min-width */
+.grid:not(.zappy-preserve-css-grid) { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)) !important; }
 .grid.grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
 .grid.grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
 .grid.grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
-.card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-.card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+/* Card styling */
+.card, .service-card, .blog-card, .testimonial-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover, .service-card:hover, .blog-card:hover, .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+.card img, .service-card img, .blog-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; cursor: pointer; border: none; }
 .btn-primary { background-color: #909080; color: white; }
 .btn-primary:hover { filter: brightness(1.1); }
-/* Pricing grid specific - use !important to override AI-generated CSS */
+/* Pricing grid specific */
 .pricing-grid { display: grid !important; gap: 2rem !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; }
 .pricing-card { background: #fff !important; border-radius: 16px !important; padding: 2rem !important; box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
 .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important; }
@@ -788,15 +814,22 @@ section[data-zappy-section] { display: block !important; grid-template-columns: 
 @media (max-width: 768px) {
   .container { padding: 0 1rem; }
   .section { padding: 2.5rem 0; }
-  .grid { gap: 1.5rem; grid-template-columns: 1fr; }
-  .grid.grid-2, .grid.grid-3, .grid.grid-4 { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
+  .grid:not(.zappy-preserve-css-grid), .services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid), .testimonials-grid:not(.zappy-preserve-css-grid) { 
+    gap: 1.5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important; 
+  }
+  .grid.grid-2:not(.zappy-preserve-css-grid), .grid.grid-3:not(.zappy-preserve-css-grid), .grid.grid-4:not(.zappy-preserve-css-grid) { grid-template-columns: 1fr; }
+  .pricing-grid:not(.zappy-preserve-css-grid) { grid-template-columns: 1fr; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .grid.grid-3, .grid.grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid.grid-3:not(.zappy-preserve-css-grid), .grid.grid-4:not(.zappy-preserve-css-grid) { grid-template-columns: repeat(2, 1fr); }
+  .services-grid:not(.zappy-preserve-css-grid), .gallery-grid:not(.zappy-preserve-css-grid), .portfolio-grid:not(.zappy-preserve-css-grid), .blog-grid:not(.zappy-preserve-css-grid) { 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important; 
+  }
 }
-/* Hero container fixes - contain absolute images */
-[class*="hero"], [id*="hero"] { position: relative !important; overflow: hidden !important; }
+/* Hero container fixes - contain absolute images and prevent viewport overflow */
+/* NOTE: Do NOT force overflow:hidden — sections with bottom SVG dividers need overflow:visible */
+[class*="hero"], [id*="hero"] { position: relative !important; max-width: 100% !important; box-sizing: border-box !important; }
 [class*="hero"] > .container, [id*="hero"] > .container { position: relative; z-index: 2; }
 .hero-image-wrapper, [class*="image-wrapper"] { position: relative !important; overflow: hidden !important; }
 /* Prevent hero positioning on non-hero page images */
@@ -858,55 +891,68 @@ img[data-no-hero-position] { position: static !important; }
 </li>
 </div>
 </div>
-</nav><main class="page-main blog-page ai-generated-page"><section class="section article-hero" id="article-1-hero" style="background-color: #f8f9fa !important; padding: 60px 0; border-bottom: 1px solid #e0e0d0;; position: relative; overflow: hidden;" data-zappy-section="true">
-  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-    <span style="display: inline-block; background-color: #e0e0d0; color: #2c3e50 !important; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px;">סיפורי הצלחה</span>
-    <h1 style="color: #2c3e50 !important; font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2;">בהקמה</h1>
-    <p style="color: #4a5568 !important; font-size: 1.2rem; line-height: 1.6;">בהקמה</p>
-  </div>
-</section>
-
-<section class="section article-content" id="article-1-content" style="background-color: #ffffff !important; padding: 60px 0;" data-zappy-section="true">
-  <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-    <div style="width: 100%; aspect-ratio: 21/9; margin-bottom: 40px; border-radius: 8px; overflow: hidden;">
-       <img data-placeholder="construction-site" data-context="Construction site of Tama 38 project with cranes and blue sky" src="/assets/page-construction-site-1764855207898.webp" alt="אתר בנייה תמ״א 38" style="width: 100%; height: 100%; object-fit: cover;" data-no-hero-position="true" class="generated-image">
+</nav><main class="page-main blog-page ai-generated-page">
+  <section class="section hero-section" id="departments-hero" style="background-color: #f8f9fa !important; padding: 4rem 0; text-align: center; border-bottom: 1px solid #e0e0d0;; position: relative; overflow: hidden;" data-zappy-section="true">
+    <div class="container">
+      <h1 style="color: #2c3e50 !important; font-size: 2.5rem; margin-bottom: 1rem; font-family: system-ui;">מחלקות משרד עורכי דין בן צבי ושות'</h1>
+      <p style="color: #4a5568 !important; font-size: 1.2rem; line-height: 1.6; max-width: 800px; margin: 0 auto;">הצוות המקצועי שלנו מחולק למחלקות ייעודיות כדי להעניק לכם את השירות המדויק והאיכותי ביותר. כל מחלקה מנוהלת על ידי עורך דין התחדשות עירונית או מומחה נדל"ן מהשורה הראשונה.</p>
     </div>
+  </section>
 
-    <h2 style="color: #2c3e50 !important; font-size: 1.8rem; margin-bottom: 20px;">האתגר: בירוקרטיה והתנגדויות</h2>
-    <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
-      
-      בהקמה
-    </p>
-    <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
-      כאן נכנס לתמונה משרד עורכי דין בן צבי ושות'. כמי שמתמחים בתחום, הבנו מיד שהמפתח לפתרון אינו רק משפטי "יבש", אלא דורש אסטרטגיה המשלבת משא ומתן רגיש עם הרשויות ועם המתנגדים, לצד עמידה איתנה על זכויות הדיירים.
-    </p>
+  <section class="section departments-section" id="departments-grid" style="background-color: #e0e0d0 !important; padding: 4rem 0;" data-zappy-section="true">
+    <div class="container">
+      <div class="services-grid">
+        <article class="card" style="background-color: #ffffff !important; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img data-placeholder="dept-urban" data-context="Lawyers reviewing architectural building plans in a modern office" src="/assets/page-dept-urban-1777446219952.webp" alt="מחלקת התחדשות עירונית" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;" data-no-hero-position="true" class="generated-image">
+          <div style="padding: 1.5rem;">
+            <h3 style="color: #2c3e50 !important; font-size: 1.4rem; margin-bottom: 0.5rem; font-family: system-ui;">מחלקת התחדשות עירונית</h3>
+            <p style="color: #4a5568 !important; font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem;">ליווי דיירים ובעלי נכסים. ייעוץ משפטי תמ״א 38 לבעלי דירות ופינוי בינוי, תוך הבטחת זכויות מלאה ושקיפות.</p>
+            <a href="/team" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s;">לכל חברי הצוות</a>
+          </div>
+        </article>
 
-    <h2 style="color: #2c3e50 !important; font-size: 1.8rem; margin-bottom: 20px; margin-top: 40px;">הפתרון המשפטי והאסטרטגי</h2>
-    <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
-      
-      בהקמה
-    </p>
-    <ul style="list-style-position: inside; margin-bottom: 25px; color: #303030 !important; font-size: 1.1rem; line-height: 1.8;">
-      <li><strong>החלפת היזם:</strong> ניהול מכרז יזמים מהיר ומקצועי לאיתור יזם בעל איתנות פיננסית מוכחת וניסיון בעיר רמת גן.</li>
-      <li><strong>גישור מול המתנגדים:</strong> קיימנו סדרת פגישות עם השכנים המתנגדים והצגנו שינויים אדריכליים מינוריים שפתרו את חששותיהם מבלי לפגוע בזכויות הדיירים שלנו.</li>
-      <li><strong>עבודה מול הוועדה המקומית:</strong> הצגת התיק באופן מסודר ומשכנע בפני גורמי התכנון, תוך הדגשת החשיבות הציבורית של הפרויקט.</li>
-    </ul>
+        <article class="card" style="background-color: #ffffff !important; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img data-placeholder="dept-realestate" data-context="Signing real estate contracts with pen and legal documents" src="/assets/page-dept-realestate-1777446217883.webp" alt="מחלקת נדל״ן ומקרקעין" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;" data-no-hero-position="true" class="generated-image">
+          <div style="padding: 1.5rem;">
+            <h3 style="color: #2c3e50 !important; font-size: 1.4rem; margin-bottom: 0.5rem; font-family: system-ui;">מחלקת נדל״ן ומקרקעין</h3>
+            <p style="color: #4a5568 !important; font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem;">טיפול מקיף בעסקאות מכר. כל עורך דין נדל״ן והתחדשות עירונית במחלקה מביא ניסיון עשיר ומומחיות במיסוי.</p>
+            <a href="/team" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s;">לכל חברי הצוות</a>
+          </div>
+        </article>
 
-    <h2 style="color: #2c3e50 !important; font-size: 1.8rem; margin-bottom: 20px; margin-top: 40px;">בהקמה</h2>
-    <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
-      לשמחתנו הרבה, המאמצים נשאו פרי. הוועדה המקומית אישרה את הבקשה להיתר בתנאים, והיזם החדש החל בקידום התוכניות. מה שהחל כפרויקט תקוע ומייאש, הפך לסיפור הצלחה. הדיירים צפויים לקבל דירות מורחבות עם ממ"ד ומרפסת שמש, לובי מחודש ומעלית, וכל זאת תוך עלייה משמעותית בערך הנכס שלהם.
-    </p>
-    <p style="color: #303030 !important; font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
-      מקרה זה מוכיח שוב כי ייעוץ משפטי תמ"א 38 לבעלי דירות אינו מותרות, אלא הכרח. הליווי הנכון יכול להציל פרויקט, לחסוך שנים של עוגמת נפש ולהבטיח את התמורה המקסימלית לדיירים.
-    </p>
+        <article class="card" style="background-color: #ffffff !important; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img data-placeholder="dept-litigation" data-context="Lawyer speaking confidently in a courtroom or formal meeting room" src="/assets/page-dept-litigation-1777446214226.webp" alt="מחלקת ליטיגציה" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;" data-no-hero-position="true" class="generated-image">
+          <div style="padding: 1.5rem;">
+            <h3 style="color: #2c3e50 !important; font-size: 1.4rem; margin-bottom: 0.5rem; font-family: system-ui;">מחלקת ליטיגציה</h3>
+            <p style="color: #4a5568 !important; font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem;">ייצוג משפטי בבתי משפט, הליכי גישור ובוררות בסכסוכי מקרקעין. הגנה בלתי מתפשרת על האינטרסים של הלקוח.</p>
+            <a href="/team" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s;">לכל חברי הצוות</a>
+          </div>
+        </article>
 
-    <div style="background-color: #e0e0d0 !important; padding: 30px; border-radius: 8px; margin-top: 50px;">
-      <h3 style="color: #2c3e50 !important; margin-bottom: 15px;">גם הבניין שלכם זקוק לפתרון?</h3>
-      <p style="color: #303030 !important; margin-bottom: 20px;">אל תתנו לבירוקרטיה לעצור אתכם. משרד עורכי דין בן צבי ושות' כאן כדי להוביל אתכם בבטחה אל הדירה החדשה.</p>
-      <a href="/contact" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 10px 25px; text-decoration: none; border-radius: 4px; font-weight: 600;">צרו קשר לייעוץ</a>
+        <article class="card" style="background-color: #ffffff !important; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <img data-placeholder="dept-admin" data-context="Friendly administrative team at law firm reception desk" src="/assets/page-dept-admin-1777446239246.webp" alt="צוות קשרי לקוחות" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;" data-no-hero-position="true" class="generated-image">
+          <div style="padding: 1.5rem;">
+            <h3 style="color: #2c3e50 !important; font-size: 1.4rem; margin-bottom: 0.5rem; font-family: system-ui;">צוות קשרי לקוחות</h3>
+            <p style="color: #4a5568 !important; font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem;">הלב הפועם של המשרד. זמינות מלאה, מענה מהיר, תיאום פגישות ושירות אישי לכל אורך הדרך עבור כלל לקוחותינו.</p>
+            <a href="/team" style="display: inline-block; background-color: #2c3e50; color: #ffffff !important; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s;">לכל חברי הצוות</a>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section></main>
+  </section>
+
+  <section class="section gallery-section" id="team-gallery" style="background-color: #f8f9fa !important; padding: 4rem 0;" data-zappy-section="true">
+    <div class="container">
+      <h2 style="color: #303030 !important; font-size: 2rem; text-align: center; margin-bottom: 2.5rem; font-family: system-ui;">הצוות שלנו בפעולה</h2>
+      <div class="portfolio-grid">
+        <img data-placeholder="gallery-1" data-context="Team of lawyers having a collaborative meeting around a conference table" src="/assets/page-gallery-1-1777446241353.webp" alt="פגישת צוות משרד עורכי דין" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-no-hero-position="true" class="generated-image">
+        <img data-placeholder="gallery-2" data-context="Lawyer shaking hands with a happy property owner client" src="/assets/page-gallery-2-1777446237684.webp" alt="לחיצת יד עם לקוח" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-no-hero-position="true" class="generated-image">
+        <img data-placeholder="gallery-3" data-context="Close up of urban renewal legal documents being signed" src="/assets/page-gallery-3-1777446268777.webp" alt="חתימה על הסכם התחדשות עירונית" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-no-hero-position="true" class="generated-image">
+        <img data-placeholder="gallery-4" data-context="Modern law firm office exterior or stylish reception area" src="/assets/page-gallery-4-1777446269443.webp" alt="משרד עורכי דין בן צבי ושות'" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-no-hero-position="true" class="generated-image">
+      </div>
+    </div>
+  </section>
+</main>
 
 
 
@@ -978,6 +1024,9 @@ img[data-no-hero-position] { position: static !important; }
 })();
 </script>
     <div data-integration="accessibility:toolbar"></div>
+<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
+<i class="fab fa-whatsapp"></i>
+</a>
 
     <script src="/script.js"></script>
 
