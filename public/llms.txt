@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# בן צבי ושות' משרד עורכי דין — Generative Engine Optimization Map
+
+> משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
 
 ---
 
@@ -72,12 +74,37 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## How to Contact Us
 
-## About Business
+- Email: office@nbz-law.co.il
+- Phone: 03-6566445
+- Phone (tel): tel:036566445
+- Address: בית כוכב, הסדנאות 4, הרצליה, ישראל
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://nbz-law.co.il/sitemap.xml
-- **Robots.txt**: https://nbz-law.co.il/robots.txt
+## About בן צבי ושות' משרד עורכי דין
+משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
+
+## Services/Products
+- ייעוץ משפטי
+- ייצוג משפטי
+- דיני מסחר
+- דיני חברות
+- דיני נדל"ן
+
+## Target Audience
+בעלי נכסים בעסקאות התחדשות עירונית
+
+## Industry
+שירותים משפטיים
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://nbz-law.co.il/sitemap.xml
+- Robots: https://nbz-law.co.il/robots.txt
+- Flattened page text (for LLMs): https://nbz-law.co.il/llms-full.txt
