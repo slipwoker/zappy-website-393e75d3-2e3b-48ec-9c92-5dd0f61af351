@@ -269,7 +269,7 @@ Happily created by Zappy
 המשרד
 
 
-בן צבי ושות' משרד עורכי דין
+בן צבי ושות' - משרד עורכי דין
 
 
 
@@ -297,6 +297,7 @@ Happily created by Zappy
 
 טלפון
 
+
 03-6566445
 
 
@@ -307,6 +308,7 @@ Happily created by Zappy
 
 
 פקס
+
 
 03-6566443
 
@@ -321,7 +323,8 @@ Happily created by Zappy
 
 דוא"ל
 
-office@nbz-law.co.il
+
+[email protected]
 
 
 
