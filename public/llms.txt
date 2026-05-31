@@ -91,7 +91,7 @@ Information about WCAG compliance and accessibility features.
 - Email: office@nbz-law.co.il
 - Phone: 03-6566445
 - Phone (tel): tel:036566445
-- Address: הסדנאות 4 הרצליה, הרצליה, ישראל
+- Address: הסדנאות 4, הרצליה
 
 ---
 
