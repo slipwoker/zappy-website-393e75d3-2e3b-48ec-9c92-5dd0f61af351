@@ -1,4 +1,4 @@
-# בן צבי ושות' משרד עורכי דין — Generative Engine Optimization Map
+# בן צבי ושות' משרד עורכי דין  — Generative Engine Optimization Map
 
 > משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
 
@@ -83,13 +83,13 @@ Information about WCAG compliance and accessibility features.
 - Email: office@nbz-law.co.il
 - Phone: 03-6566445
 - Phone (tel): tel:036566445
-- Address: הסדנאות 4, הרצליה
+- Address: הסדנאות 4 הרצליה, הרצליה, ישראל
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About בן צבי ושות' משרד עורכי דין
+## About בן צבי ושות' משרד עורכי דין 
 משרד עורכי דין מקצועי המספק שירותים משפטיים מקיפים ללקוחות פרטיים ועסקיים. המשרד מתמחה במגוון תחומי משפט ומעניק ייצוג איכותי ומסור.
 
 ## Services/Products
